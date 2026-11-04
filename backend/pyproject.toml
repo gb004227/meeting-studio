@@ -1,0 +1,13 @@
+[project]
+name = "meeting-studio-backend"
+version = "0.1.2"
+requires-python = ">=3.12,<3.13"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1", "httpx>=0.28,<1", "websockets>=15,<17", "python-multipart>=0.0.20", "imageio-ffmpeg>=0.6", "numpy>=2,<3", "tos>=2.9,<3", "sherpa-onnx==2.0.1"]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-asyncio>=0.24"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
